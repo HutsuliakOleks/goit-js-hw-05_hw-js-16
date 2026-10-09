@@ -1,9 +1,7 @@
 // Завдання 1
-class Account {
-  constructor({ login, email }) {
-    this._login = login;
-    this._email = email;
-  }
+const Account = function ({ login, email }) {
+    (this._login = login),
+    (this._email = email),
   getInfo() {
     return `Login: ${this._login}, Email: ${this._email}`;
   }
@@ -14,14 +12,14 @@ const mango = new Account({
   email: "mango@dog.woof",
 });
 
-console.log(mango.getInfo());
+mango.getInfo();
 
 const poly = new Account({
   login: "Poly",
   email: "poly@mail.com",
 });
 
-console.log(poly.getInfo());
+poly.getInfo();
 
 // Завдання 2
 
